@@ -1,0 +1,63 @@
+{
+  "name": "skeleton/gg",
+  "description": "skeleton description",
+  "keywords": [
+  ],
+  "homepage": "https://github.com/binbyz/package-skeleton",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "WONBEEN IM",
+      "email": "eyedroot@gmail.com",
+      "homepage": "https://twitter.com/eyedroot",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "illuminate/log": "^8.19|^9.0|^10.0",
+    "illuminate/contracts": "^8.19|^9.0|^10.0",
+    "illuminate/database": "^8.19|^9.0|^10.0",
+    "illuminate/queue": "^8.19|^9.0|^10.0",
+    "illuminate/support": "^8.19|^9.0|^10.0"
+  },
+  "require-dev": {
+    "beaverlabs/gg": "^1.4",
+    "fakerphp/faker": "^1.23",
+    "guzzlehttp/guzzle": "^7.0",
+    "laravel/framework": "^8.19|^9.0|^10.0",
+    "mockery/mockery": "^1.6.2",
+    "orchestra/testbench-core": "^6.0|^7.0|^8.5.8",
+    "pestphp/pest" : "^2.6.1" ,
+    "phpunit/phpunit" : "^10.1.3"
+  },
+  "autoload" : {
+    "psr-4" : {
+      "Beaverlabs\\Skeleton\\" : "src"
+    },
+    "files" : [
+      "src/helper.php"
+    ]
+  },
+  "autoload-dev" : {
+    "psr-4" : {
+      "Beaverlabs\\Skeleton\\Tests\\" : "tests/"
+    }
+  },
+  "scripts" : {
+    "test" : "vendor/bin/pest" ,
+    "test-coverage" : "vendor/bin/pest --coverage"
+  },
+  "config" : {
+    "sort-packages" : true,
+    "allow-plugins" : {
+      "pestphp/pest-plugin" : true
+    }
+  },
+  "minimum-stability" : "dev" ,
+  "prefer-stable" : true,
+  "funding" : [
+  ]
+}
