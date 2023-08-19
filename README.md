@@ -1,3 +1,7 @@
-# Skeleton
+# bulletin board on laravel framework.
 
-## package-skeleton
+## Installation
+
+```bash
+composer require beaverlabs/board
+```

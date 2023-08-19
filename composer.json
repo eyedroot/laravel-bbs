@@ -1,9 +1,14 @@
 {
-  "name": "skeleton/gg",
-  "description": "skeleton description",
+  "name": "beaverlabs/board",
+  "description": "A bulletin board system on the Laravel framework.",
   "keywords": [
+    "board",
+    "bbs",
+    "forum",
+    "laravel",
+    "korean"
   ],
-  "homepage": "https://github.com/binbyz/package-skeleton",
+  "homepage": "https://github.com/binbyz/laravel-bbs",
   "license": "MIT",
   "authors": [
     {
@@ -35,7 +40,7 @@
   },
   "autoload" : {
     "psr-4" : {
-      "Beaverlabs\\Skeleton\\" : "src"
+      "Beaverlabs\\Board\\" : "src"
     },
     "files" : [
       "src/helper.php"
@@ -43,7 +48,7 @@
   },
   "autoload-dev" : {
     "psr-4" : {
-      "Beaverlabs\\Skeleton\\Tests\\" : "tests/"
+      "Beaverlabs\\Board\\Tests\\" : "tests/"
     }
   },
   "scripts" : {
