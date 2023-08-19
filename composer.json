@@ -61,6 +61,13 @@
       "pestphp/pest-plugin" : true
     }
   },
+  "extra": {
+    "laravel" : {
+      "providers" : [
+        "Beaverlabs\\Board\\Providers\\BoardServiceProvider"
+      ]
+    }
+  },
   "minimum-stability" : "dev" ,
   "prefer-stable" : true,
   "funding" : [
