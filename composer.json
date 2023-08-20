@@ -22,7 +22,8 @@
     "php": "^8.1",
     "ext-curl": "*",
     "ext-json": "*",
-    "laravel/framework": "^8.67|^9.0|^10.0"
+    "laravel/framework": "^8.67|^9.0|^10.0",
+    "laravel/sanctum": "^3.2"
   },
   "require-dev": {
     "beaverlabs/gg": "^1.4",

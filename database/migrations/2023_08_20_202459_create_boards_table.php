@@ -7,23 +7,20 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('boards', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->enum('state', ['PUBLIC', 'PRIVATE', 'ANONYMOUS', 'RESTRICTED'])->default('PRIVATE');
+            $table->string('name', 50);
+            $table->string('description', 100)->nullable();
+            $table->string('slug', 50)->unique();
             $table->json('metadata')->nullable();
-            $table->rememberToken();
             $table->softDeletes();
             $table->timestamps();
-
-            $table->fullText('name');
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('boards');
     }
 };

@@ -5,8 +5,8 @@ namespace Beaverlabs\Board\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-/** @mixin \Beaverlabs\Board\Models\Board\BoardCategory */
-class CategoryResource extends JsonResource
+/** @mixin \Beaverlabs\Board\Models\Board\BoardAuthority */
+class BoardOwnerResource extends JsonResource
 {
     public function toArray(Request $request): array
     {

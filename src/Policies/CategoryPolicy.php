@@ -3,7 +3,7 @@
 namespace Beaverlabs\Board\Policies;
 
 use App\User;
-use Beaverlabs\Board\Models\Article\Category;
+use Beaverlabs\Board\Models\Board\BoardCategory;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class CategoryPolicy
@@ -15,7 +15,7 @@ class CategoryPolicy
 
     }
 
-    public function view(User $user, Category $category): bool
+    public function view(User $user, BoardCategory $category): bool
     {
     }
 
@@ -23,19 +23,19 @@ class CategoryPolicy
     {
     }
 
-    public function update(User $user, Category $category): bool
+    public function update(User $user, BoardCategory $category): bool
     {
     }
 
-    public function delete(User $user, Category $category): bool
+    public function delete(User $user, BoardCategory $category): bool
     {
     }
 
-    public function restore(User $user, Category $category): bool
+    public function restore(User $user, BoardCategory $category): bool
     {
     }
 
-    public function forceDelete(User $user, Category $category): bool
+    public function forceDelete(User $user, BoardCategory $category): bool
     {
     }
 }

@@ -2,13 +2,13 @@
 
 namespace Database\Factories;
 
-use Beaverlabs\Board\Models\Board\BoardCategory;
+use Beaverlabs\Board\Models\Board\BoardAuthority;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Carbon;
 
-class CategoryFactory extends Factory
+class BoardAuthorityFactory extends Factory
 {
-    protected $model = BoardCategory::class;
+    protected $model = BoardAuthority::class;
 
     public function definition(): array
     {

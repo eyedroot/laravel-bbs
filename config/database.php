@@ -8,6 +8,7 @@ return [
             'database' => env('BBS_DB_DATABASE', 'forge'),
             'username' => env('BBS_DB_USERNAME', 'forge'),
             'password' => env('BBS_DB_PASSWORD', ''),
+            'prefix' => 'board_',
         ],
         'bbs_replica' => [
             'driver' => 'mysql',
@@ -16,6 +17,7 @@ return [
             'database' => env('BBS_DB_DATABASE', 'forge'),
             'username' => env('BBS_DB_USERNAME', 'forge'),
             'password' => env('BBS_DB_PASSWORD', ''),
+            'prefix' => 'board_',
         ],
     ],
 ];

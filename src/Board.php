@@ -2,7 +2,7 @@
 
 namespace Beaverlabs\Board;
 
-class Core
+class Board
 {
     public function __construct()
     {
