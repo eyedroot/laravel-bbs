@@ -11,8 +11,11 @@ class BoardServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->app->bind(Board::class, function () {
-            return new Board();
+        $this->app->bind(Board::class, function ($app, $params) {
+            return new Board(
+                $params['board_id'],
+                $params['board_slug'],
+            );
         });
     }
 

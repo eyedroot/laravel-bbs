@@ -2,8 +2,8 @@
 
 namespace Beaverlabs\Board\Policies;
 
-use App\User;
 use Beaverlabs\Board\Models\Board\BoardCategory;
+use Beaverlabs\Board\Models\User\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class CategoryPolicy
