@@ -2,7 +2,7 @@
 
 namespace Beaverlabs\Board\Models\Article;
 
-use Beaverlabs\Board\Enums\Article\State;
+use Beaverlabs\Board\Models\Article\Types\ArticleState;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -24,7 +24,7 @@ class Article extends Model
     ];
 
     protected $casts = [
-        'state' => State::class,
+        'state' => ArticleState::class,
         'created_at' => 'immutable_datetime',
     ];
 }
