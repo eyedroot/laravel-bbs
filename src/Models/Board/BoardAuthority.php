@@ -9,6 +9,4 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class BoardAuthority extends Model
 {
     use SoftDeletes, HasFactory;
-
-    protected $connection = 'bbs_source';
 }

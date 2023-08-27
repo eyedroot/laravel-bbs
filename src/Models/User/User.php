@@ -12,8 +12,6 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
 
-    protected $connection = 'bbs_source';
-
     /**
      * The attributes that are mass assignable.
      *

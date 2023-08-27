@@ -1,19 +1,18 @@
 <?php
 
-namespace Beaverlabs\Skeleton\Tests;
+namespace Beaverlabs\Board\Tests;
 
+use Beaverlabs\Board\Providers\BoardServiceProvider;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-abstract class TestCase extends \Illuminate\Foundation\Testing\TestCase
+class TestCase extends \Orchestra\Testbench\TestCase
 {
-    use \Orchestra\Testbench\Concerns\CreatesApplication;
     use DatabaseMigrations;
 
-    protected function setUp(): void
+    protected function getPackageProviders($app): array
     {
-        parent::setUp();
-
-//        $this->app->register(GgServiceProvider::class);
-//        $this->app->register(EventServiceProvider::class);
+        return [
+            BoardServiceProvider::class,
+        ];
     }
 }

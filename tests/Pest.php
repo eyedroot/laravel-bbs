@@ -11,7 +11,9 @@
 |
 */
 
-// uses(Tests\TestCase::class)->in('Feature');
+use Beaverlabs\Board\Tests\TestCase;
+
+uses(TestCase::class)->in('Feature', 'Unit');
 
 /*
 |--------------------------------------------------------------------------

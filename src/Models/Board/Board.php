@@ -10,8 +10,6 @@ class Board extends Model
 {
     use SoftDeletes, HasFactory;
 
-    protected $connection = 'bbs_source';
-
     protected $fillable = [
         'name',
     ];

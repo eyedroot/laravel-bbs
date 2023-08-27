@@ -2,7 +2,6 @@
 
 namespace Beaverlabs\Board;
 
-class BoardTheme
+interface BoardInterface
 {
-
 }
