@@ -10,12 +10,12 @@ return new class extends Migration {
         Schema::create('board_authorities', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('board_id');
-            $table->enum('authority', ['READ', 'WRITE', 'MANAGE'])->default('READ');
+            $table->enum('authority', ['OWNER', 'ADMIN', 'MEMBER', 'GUEST'])->default('READ');
             $table->unsignedTinyInteger('user_id')->nullable();
             $table->softDeletes();
             $table->timestamps();
 
-            $table->unique(['board_id', 'authority', 'value']);
+            $table->unique(['board_id', 'authority', 'user_id']);
             $table->foreign('board_id')->references('id')->on('boards');
             $table->foreign('user_id')->references('id')->on('users');
         });

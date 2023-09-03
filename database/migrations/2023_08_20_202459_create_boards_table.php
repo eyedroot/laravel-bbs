@@ -10,12 +10,15 @@ return new class extends Migration {
         Schema::create('boards', function (Blueprint $table) {
             $table->id();
             $table->enum('state', ['PUBLIC', 'PRIVATE', 'ANONYMOUS', 'RESTRICTED'])->default('PRIVATE');
-            $table->string('name', 50);
+            $table->unsignedBigInteger('localization_id');
             $table->string('description', 100)->nullable();
             $table->string('slug', 50)->unique();
             $table->json('metadata')->nullable();
             $table->softDeletes();
             $table->timestamps();
+
+            $table->foreign('localization_id')->references('id')->on('board_localizations');
+            $table->index('slug');
         });
     }
 

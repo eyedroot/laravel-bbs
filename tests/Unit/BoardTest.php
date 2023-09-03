@@ -1,8 +1,8 @@
 <?php
 
-use Beaverlabs\Board\BoardInterface;
+use Beaverlabs\Board\Contracts\Board;
 use Beaverlabs\Board\Exceptions\Board\EmptyAuthorityException;
 
 it('throws EmptyAuthorityException', function () {
-    $this->app->make(BoardInterface::class, ['board_slug' => 1]);
+    $this->app->make(Board::class, ['board_slug' => 1]);
 })->throws(EmptyAuthorityException::class);

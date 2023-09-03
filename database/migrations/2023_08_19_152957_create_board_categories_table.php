@@ -11,12 +11,13 @@ return new class extends Migration {
             $table->id();
             $table->unsignedBigInteger('board_id');
             $table->string('code', 9);
-            $table->json('names');
+            $table->json('localization_id');
             $table->softDeletes();
             $table->timestamps();
 
             $table->unique(['board_id', 'code']);
             $table->foreign('board_id')->references('id')->on('boards');
+            $table->foreign('localization_id')->references('id')->on('board_localizations');
         });
     }
 

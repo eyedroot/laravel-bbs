@@ -2,11 +2,12 @@
 
 namespace Beaverlabs\Board;
 
+use Beaverlabs\Board\Contracts\Board as BoardContract;
 use Beaverlabs\Board\Exceptions\Board\EmptyAuthorityException;
 use Beaverlabs\Board\Models\Board\BoardAuthority;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
-class Board implements BoardInterface
+class Board implements BoardContract
 {
     private BoardAuthority $boardAuthority;
 
