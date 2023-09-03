@@ -24,5 +24,9 @@ class BoardServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
+
+        $this->publishes([
+            __DIR__ . '/../../config/database.php' => \config_path('database.php'),
+        ]);
     }
 }
