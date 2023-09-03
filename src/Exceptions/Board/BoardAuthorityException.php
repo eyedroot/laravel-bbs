@@ -4,7 +4,7 @@ namespace Beaverlabs\Board\Exceptions\Board;
 
 use Beaverlabs\Board\Exceptions\FatalConfigurationException;
 
-class EmptyAuthorityException extends FatalConfigurationException
+class BoardAuthorityException extends FatalConfigurationException
 {
     public static function make(int $boardId): self
     {

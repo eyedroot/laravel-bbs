@@ -1,10 +1,10 @@
 <?php
 
-use Beaverlabs\GG\GG;
+use Beaverlabs\Board\Board;
 
-if (! function_exists('gg')) {
-    function gg(): GG
+if (! function_exists('board_id_from_slug')) {
+    function board_id_from_slug(string $boardSlug): ?int
     {
-        return new GG();
+        return Board::findBoardSlug($boardSlug);
     }
 }
